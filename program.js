@@ -126,7 +126,7 @@ var scroll_pos = 0;
                 } else if (scroll_pos > 199 ) {
                     $(".bg").css('background', 'radial-gradient( #a8e063, #56ab2f)');
                 }
-                console.log(scroll_pos);
+                //console.log(scroll_pos);
             });
 
 //************************************************************
@@ -135,16 +135,19 @@ var scroll_pos = 0;
 //MORPHING DAUPHIN
 function dauphin(){
 
-$(".polyg28").css({'animation': 'nagelefto 3s infinite', "clip-path": "polygon(69% 65%, 74% 95%, 12% 52%)",
-	    'width': '150px',
-        'height': '150px',
-        'left': '276px',
-        'top': '160px'});
-$(".polyg29").css('animation', 'nageleft 3s infinite');
-$(".polyg30").css('animation', 'nageright 3s infinite');
-	$(".polyg0").css('left', '116px');
-    	$(".polyg1").css('top', '150px');
-			$(".polyg2").css('left', '136px');
+	$(".polyg28").css({'animation': 'nagelefto 3s infinite', "clip-path": "polygon(69% 65%, 74% 95%, 12% 52%)",
+		'width': '150px',
+		'height': '150px',
+		'left': '276px',
+		'top': '160px'});
+
+		$(".polyg29").css('animation', 'nageleft 3s infinite');
+
+			$(".polyg30").css('animation', 'nageright 3s infinite');
+
+				$(".polyg0").css('left', '116px');
+			    	$(".polyg1").css('top', '150px');
+						$(".polyg2").css('left', '136px');
 
 }
 
@@ -162,7 +165,14 @@ $(".polyg28").css({'animation': 'none',
         'left': '126px',
         'top': '290px'});
 
-$(".polyg29").css('animation', 'none');
+$(".polyg29").css({'animation': 'none',
+		'clip-path': 'polygon(16% 55%, 62% 74%, 39% 95%)',
+		'transform' : 'rotate(-1deg)',
+		'width': '100px',
+        'height': '100px ',
+        'left': '138px',
+        'top': '287px'});
+
 $(".polyg30").css('animation', 'none');
 	  $(".polyg0").css('left', '80px');
                     $(".polyg1").css('top', '80px');
