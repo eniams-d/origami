@@ -3,24 +3,26 @@
 	margin:0;
 }
 
+body{
+	height:1200px;
+	   	
+}
+
 .bg{
 	position:fixed;
-	background: radial-gradient( #00c6ff, #0072ff);
+	background: radial-gradient( #87E9FF, #0072ff);
 	width:100%;
 	height:100vh;
 	display: flex;
 	flex-direction: column; 
    	justify-content: center;
    	transition: background 0.9s ease;
+
 }
 
 
 
-body{
 
-	height:1200px;
-	   	overflow: visible;
-}
 
 
 /****************ANIMATION MOOVE**********************/
@@ -31,6 +33,7 @@ body{
 	height:500px;
 	margin: 0 auto;
 	animation: moove 3s ease infinite;
+
 }
 
 @keyframes moove{

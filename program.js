@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
 
+
 // effet surbrillance
 function effetbrillance(container) {
 
@@ -114,15 +115,15 @@ var scroll_pos = 0;
             $(document).scroll(function() { 
                 scroll_pos = $(this).scrollTop();
 
-			if(scroll_pos < 100) {
-                    $(".bg").css('background', 'radial-gradient( #00c6ff, #0072ff)');
+			if(scroll_pos > 0 && scroll_pos < 99) {
+                    $(".bg").css('background', 'radial-gradient( #87E9FF, #0072ff)');
                     dauphin();
                 }
 
-                else if(scroll_pos < 250) {
-                    $(".bg").css('background', 'radial-gradient( #fdc830, #f37335)');
+                else if(scroll_pos > 99 && scroll_pos < 199) {
+                    $(".bg").css('background', 'radial-gradient( #FDD55A, #f37335)');
                   elephant();
-                } else if (scroll_pos < 400) {
+                } else if (scroll_pos > 199 ) {
                     $(".bg").css('background', 'radial-gradient( #a8e063, #56ab2f)');
                 }
                 console.log(scroll_pos);
