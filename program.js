@@ -1,72 +1,8 @@
-
-/*
-document.addEventListener('DOMContentLoaded', function () {
-
-
-var classNames = new Array('div .polyg1','div .polyg2','div .polyg9','div .polyg8','div .polyg6','div .polyg7','div .polyg9', 'div .polyg15','div .polyg16','div .polyg17','div .polyg18','div .polyg23','div .polyg24', 'div .polyg25');
-var classNLength = classNames.length;
-var currentpolyg = 0;
-
-
-function changecolor(){
-
-var polyg = document.querySelector(classNames[currentpolyg]);
-
-
-		
-
-				polyg.classList.toggle('polygopa');
-		currentpolyg++;
-
-		if (currentpolyg === classNLength){
-			currentpolyg = 0;
-		}
-
-	
-		setTimeout(changecolor,80);
-		clearTimeout(changecolor);
-
-	}
-
-
-
-changecolor();
-
-
-
-
-function find(numbers)
-{
-    var max = 0;
- 		var val;
-
-    for (i=0; val = numbers[i]; i++)
-    {
-        if (val > max)
-        {
-            max=val;
-        }
-    }
-    return max;
-
-}
-
-console.log(find([50,20,2,99,18]));
-
-
-
-
-});
-
-
-*/
-
 $(document).ready(function(){
 
 
-// effet brillance
-
-function effetmirroir(container) {
+// effet surbrillance
+function effetbrillance(container) {
 
   setInterval(function() {
     
@@ -86,35 +22,28 @@ function effetmirroir(container) {
   }, 7000);
 }
 
-
 $(".dauphin").each(function() {
-    effetmirroir($(this));
+    effetbrillance($(this));
   });
+//************************************************************
 
 
-
-// clignement de l'oeil
-
-
-
-
+// CLIGNEMENT DE L'OEIL HAUT
 function clignement(pupille){
 	
-
 	setInterval(function(){
 
 		setTimeout(function() {
 
-    	pupille.addClass('clignement');
+    		pupille.addClass('clignement');
      		
-    }, 1000);
+    	}, 1000);
 
+	    setTimeout(function() {
+	    	 
+	    	pupille.removeClass('clignement');
 
-    setTimeout(function() {
-    	 
-    pupille.removeClass('clignement');
-    }, 2000);
-
+	    }, 2000);
 
 	},6000);
 }
@@ -122,8 +51,10 @@ function clignement(pupille){
 $(".pupille").each(function() {
     clignement($(this));
   });
+//************************************************************
 
 
+// CLIGNEMENT DE L'OEIL BAS
 function clignementdeux(pupilledeux){
 	
 	setInterval(function(){
@@ -132,14 +63,13 @@ function clignementdeux(pupilledeux){
 
 			pupilledeux.addClass('clignementdeux');
      		
-    }, 1000);
+    	}, 1000);
 
+	    setTimeout(function() {
+	    	 
+	    	pupilledeux.removeClass('clignementdeux');
 
-    setTimeout(function() {
-    	 
-    pupilledeux.removeClass('clignementdeux');
-    }, 2000);
-
+	    }, 2000);
 
 	},6000);
 }
@@ -147,11 +77,11 @@ function clignementdeux(pupilledeux){
 $(".pupille-2").each(function() {
     clignementdeux($(this));
   });
+//***********************************************************
 
 
-
+// CLIGNEMENT DE LA PUPILLE BLANCHE
 function clignementtrois(pupilletrois){
-
 
 	setInterval(function(){
 
@@ -162,10 +92,11 @@ function clignementtrois(pupilletrois){
     }, 1000);
 
 
-    setTimeout(function() {
-    	 
-    pupilletrois.removeClass('pupi-bl-cligne');
-    }, 2000);
+	    setTimeout(function() {
+	    	 
+	    	pupilletrois.removeClass('pupi-bl-cligne');
+
+	    }, 2000);
 
 
 	},6000);
@@ -175,32 +106,51 @@ function clignementtrois(pupilletrois){
 $(".pupi-bl").each(function() {
     clignementtrois($(this));
   });
+//************************************************************
 
 
+// CHANGLENET COULEUR BG
+var scroll_pos = 0;
+            $(document).scroll(function() { 
+                scroll_pos = $(this).scrollTop();
+
+			if(scroll_pos >0  && scroll_pos < 100) {
+                    $(".bg").css('background', 'radial-gradient( #fff, #2193b0)');
+                }
+
+                else if(scroll_pos ==  100 && scroll_pos < 200) {
+                    $(".bg").css('background', 'radial-gradient( #fdc830, #f37335)');
+                  elephant();
+                } else if (scroll_pos > 200) {
+                    $(".bg").css('background', 'radial-gradient( #56ab2f, #a8e063)');
+                }
+            });
+
+//************************************************************
+
+
+//MORPHING DAUPHIN
+function dauphin(){
+	$(".polyg0").css('left', '116px');
+    	$(".polyg1").css('top', '116px');
+			$(".polyg2").css('left', '103px');
+
+}
+
+
+
+
+
+//MORPHING ELEPHANT
 function elephant(){
 
 	  $(".polyg0").css('left', '80px');
                     $(".polyg1").css('top', '80px');
                     $(".polyg2").css('left', '40px');
 }
+//************************************************************
 
 
-
-
-var scroll_pos = 1;
-            $(document).scroll(function() { 
-                scroll_pos = $(this).scrollTop();
-                if(scroll_pos > 0) {
-                    $(".bg").css('background', 'radial-gradient( #fdc830, #f37335)');
-                  elephant();
-                } else {
-                    $(".bg").css('background-color', 'red');
-                }
-
-
-                
-                console.log(scroll_pos);
-            });
       
 
 
