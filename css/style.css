@@ -1,0 +1,728 @@
+*{
+	padding:0;
+	margin:0;
+}
+
+.bg{
+	position:fixed;
+	background: radial-gradient( #fff, #2193b0);
+	width:100%;
+	height:100vh;
+	display: flex;
+	flex-direction: column; 
+   	justify-content: center;
+   	transition: background 0.9s ease;
+}
+
+
+
+body{
+
+	height:1200px;
+	   	overflow: visible;
+}
+
+
+/****************ANIMATION MOOVE**********************/
+
+.animation{
+	position:relative;
+	width:900px;
+	height:500px;
+	margin: 0 auto;
+	animation: moove 3s ease infinite;
+}
+
+@keyframes moove{
+
+	0%{
+
+		transform: translateX(0px);
+	}
+
+	50%{
+
+		transform: translateX(20px);
+	}
+
+	80%{
+
+		transform: translateX(-20px);
+	}
+
+	100%{
+
+		transform: translateX(0px);
+	}
+}
+/***********************************************/
+
+
+
+.dauphin{
+
+	transform: rotate(-8deg);
+}
+
+
+
+.polyg{
+	position:absolute;
+	width: 100px;
+    height: 150px;
+	transition:all .5s ease;
+}
+
+
+
+.polyg0{
+    clip-path: polygon(14% 49%, 0 61%, 47% 61%);
+    background-color: #334543;
+    transform: rotate(2deg); 
+    width: 70px;
+    height: 70px;
+    left: 116px;
+    top: 207px;   
+    z-index:1;
+}
+
+.polyg01{
+    clip-path: polygon(14% 49%, 46% 49%, 47% 61%);
+    background-color: #334543;
+    transform: rotate(0deg);
+    width: 70px;
+    height: 85px;
+    left: 115px;
+    top: 199px; 
+    z-index:1;
+}
+
+.polyg02{
+     clip-path: polygon(14% 49%, 22% 62%, 45% 49%);
+     background-color: #000;
+     transform: rotate(0deg);
+     width: 105px;
+     height: 95px;
+     left: 103px;
+     top: 201px;
+}
+
+.polyg03{
+  clip-path: polygon(65% 61%, 22% 62%, 42% 49%);
+  background-color: #000;
+  transform: rotate(0deg);
+  width: 100px;
+  height: 90px;
+  left: 103px;
+  top: 205px;
+}
+
+
+
+.polyg1{
+    clip-path: polygon(60px 15px, 0px 100px, 30px 15px);
+    background-color: #3c4650;
+    transform: rotate(10deg);
+    left:150px;
+    top:150px;   
+}
+
+
+.polyg2{
+    clip-path: polygon(50px 70px, 20px 105px, 60px 10px);
+    background-color: #0f1622;
+    transform: rotate(22deg);
+    left: 136px;
+    top: 149px;
+}
+
+.polyg3{
+    clip-path: polygon(72px 60px, 24px 50px, 55px 40px);
+    background-color: #fff;
+    transform: rotate(141deg);
+    left: 104px;
+    top: 140px;
+}
+
+.polyg4{
+    clip-path: polygon(83px 45px, 54px 50px, 55px 40px);
+    background-color: #334543;
+    transform: rotate(-2deg);
+    left: 92px;
+    top: 201px;
+}
+
+.polyg5{
+    clip-path: polygon(92px 35px, 84px 50px, 63px 40px);
+    background-color: #000;
+    transform: rotate(-2deg);
+    left: 83px;
+    top: 211px;
+}
+
+.polyg6{
+    clip-path: polygon(250px 0px, 82px 50px, 52px 46px);
+    background-color: #273537;
+    transform: rotate(2deg);
+    width: 500px;
+    height: 250px;
+    left: 134px;
+    top: 124px;
+}
+
+.polyg7{
+    clip-path: polygon(150px 50px, 264px 8px, 1px 206px);
+    background-color: #384e4d;
+    transform: rotate(32deg);
+    width: 300px;
+    height: 350px;
+    left: 212px;
+    top: 45px;
+}
+
+.polyg8{
+    clip-path: polygon(35px 124px, 208px 16px, 30px 60.2px);
+    background-color: #486461;
+    transform: rotate(9deg);
+    width: 300px;
+    height: 350px;
+    left: 171px;
+    top: 124px;
+}
+
+.polyg9{
+    clip-path: polygon(145px 5px, 102px 51px, 88px 25px);
+    background-color: #62827f;
+    transform: rotate(-38.5deg);
+    width: 300px;
+    height: 350px;
+    left: 180px;
+    top: 123px;
+}
+
+
+/*******OEIL*********/
+
+.polyg10{
+    clip-path: polygon(120px 51px, 76px 67px, 95px 40px);
+    background-color: #333c40;
+    transform: rotate(0deg);
+    width: 300px;
+    height: 350px;
+    left: 95px;
+    top: 180px;
+}
+
+.polyg11{
+clip-path: polygon(50% 59%, 8% 69%, 40% 73%);
+      background-color: #1c2529;
+    transform: rotate(0deg);
+  
+    left: 165px;
+    top: 142px;
+}
+
+
+.pupille{
+    clip-path: polygon(120px 51px, 76px 67px, 95px 40px);
+    background-color: #000;
+    transform: rotate(0deg);
+    width: 150px;
+    height: 100px;
+    left: 95px;
+    top: 180px;
+    z-index:1;
+    
+}
+
+.pupille-2{
+clip-path: polygon(50% 59%, 8% 69%, 40% 73%);
+      background-color: #000;
+    transform: rotate(0deg);
+ 
+    left: 165px;
+    top: 142px;
+    
+}
+
+.clignement{
+
+	animation : wink 0.5s ease infinite;
+}
+
+@keyframes wink{
+
+	0%{clip-path: polygon(120px 51px, 76px 67px, 95px 40px);
+
+		
+	}
+
+		
+	
+	100%{clip-path: polygon(120px 51px, 76px 67px, 95px 60px);
+		
+	}
+}
+
+.clignementdeux{
+
+	animation : winkde 0.5s ease infinite;
+}
+
+@keyframes winkde{
+
+	0% {clip-path: polygon(50% 59%, 8% 69%, 40% 73%);
+
+		
+	}
+
+
+100% {clip-path: polygon(50% 59%, 8% 69%, 20% 65%);
+		
+	}
+}
+
+.pupi-bl{
+	clip-path: polygon(43% 48%, 34% 56%, 42% 54%);
+	background-color: #fff;
+    transform: rotate(0deg);
+    left: 150px;
+    top: 157px;
+    z-index:1;
+}
+
+.pupi-bl-cligne{
+
+	animation: cligne 0.5s ease infinite;
+}
+
+@keyframes cligne {
+
+0% {clip-path: polygon(43% 48%, 34% 56%, 42% 54%);
+
+		
+	}
+
+
+100% {clip-path: polygon(43% 54%, 34% 56%, 42% 54%);
+		
+	}
+
+}
+
+
+.polyg12{
+clip-path: polygon(7% 54%, 3% 64%, 84% 72.5%);     
+background-color: #fff;
+    transform: rotate(0deg);
+width: 210px;
+    height: 150px;
+    left: 159px;
+    top: 164px;
+    z-index:2;
+}
+
+.polyg13{
+	    clip-path: polygon(11% 52%, 2% 66%, 100% 83%);
+    background-color: #bdd0d0;
+    transform: rotate(-2deg);
+    width: 133px;
+    height: 150px;
+    left: 201px;
+    top: 150px;
+}
+
+.polyg14{
+    clip-path: polygon(12% 39%, 87% 28%, 74% 69.9%);
+    background-color: #aac7c6;
+    transform: rotate(-2deg);
+    width: 190px;
+    height: 150px;
+    left: 193px;
+    top: 169px;
+}
+
+.polyg15{
+    clip-path: polygon(0 74%, 98% 24%, 74% 62%);
+    background-color: #62827f;
+    transform: rotate(-1deg);
+      width: 190px;
+    height: 150px;
+    left: 217px;
+    top: 117px;
+}
+
+.polyg16{
+ clip-path: polygon(1% 22%, 93% 15%, 84% 29%);
+    background-color: #415555;
+    transform: rotate(-1deg);
+    width: 160px;
+    height: 150px;
+    left: 398px;
+    top: 117px;
+}
+
+.polyg17{
+        clip-path: polygon(1% 21.6%, 95% 72%, 84% 28%);
+    background-color: #486461;
+    transform: rotate(-1deg);
+    width: 160px;
+    height: 150px;
+    left: 398px;
+    top: 117px;
+}
+
+.polyg18{
+        clip-path: polygon(25% 22.5%, 100% 75%, 0% 61%);
+    background-color: #739998;
+    transform: rotate(-2deg);
+    width: 194px;
+    height: 150px;
+    left: 356px;
+    top: 115px;
+}
+
+.polyg19{
+         clip-path: polygon(80% 95%, 100% 54.5%, 0 41%);
+    background-color: #d8e2de;
+    transform: rotate(-2deg);
+    width: 194px;
+    height: 150px;
+    left: 356px;
+    top: 145px;
+}
+
+.polyg20{
+        clip-path: polygon(91% 92%, 0% 83%, 11% 41%);
+    background-color: #d9ebeb;
+    transform: rotate(0deg);
+    width: 198px;
+    height: 150px;
+    left: 334px;
+    top: 148px;
+}
+
+.polyg21{
+          clip-path: polygon(27% 84%, 22% 27%, 7% 40%);
+    background-color: #384e4d;
+    transform: rotate(0deg);
+    width: 100px;
+    height: 150px;
+    left: 524px;
+    top: 98px;
+}
+
+.polyg22{
+       clip-path: polygon(57% 69%, 60% 25%, 7% 67%);
+    background-color: #2d3b3b;
+    transform: rotate(0deg);
+    width: 180px;
+    height: 180px;
+    left: 354px;
+    top: 9px;
+    z-index: 1;
+}
+
+.polyg23{
+     clip-path: polygon(100% 88%, 6% 27%, 10% 90.2%);
+    background-color: #4b6364;
+    transform: rotate(0deg);
+    width: 160px;
+    height: 135px;
+    left: 535px;
+    top: 102px;
+}
+
+.polyg24{
+       clip-path: polygon(100% 41%, 21% 42%, 0% 88%);
+    background-color: #c4ddd6;
+    transform: rotate(0deg);
+    width: 183px;
+    height: 138px;
+    left: 512px;
+    top: 165px;
+}
+
+.polyg25 {
+    clip-path: polygon(100% 90%, 14% 46%, 78% 100%);
+    background-color: #2d3b3b;
+    transform: rotate(0deg);
+    width: 230px;
+    height: 150px;
+    left: 514px;
+    top: 71px;
+}
+
+.polyg26{
+     clip-path: polygon(82% 67%, 43% 59%, 16% 86%);
+    background-color: #365255;
+    transform: rotate(10deg);
+    width: 200px;
+    height: 138px;
+    left: 656px;
+    top: 101px;
+    z-index: 1;
+}
+
+.polyg27{
+       clip-path: polygon(82% 67%, 49% 96%, 16% 86%);
+    background-color: #678781;
+    transform: rotate(10deg);
+    width: 200px;
+    height: 138px;
+    left: 656px;
+    top: 101px;
+    z-index: 1;
+}
+
+.polyg28{
+        clip-path: polygon(69% 65%, 74% 95%, 12% 52%);
+    background-color: #334543;
+    transform: rotate(8deg);
+    width: 150px;
+    height: 150px;
+    left: 276px;
+    top: 160px;
+    z-index: 4;
+    animation: nagelefto 3s infinite;
+}
+
+@keyframes nagelefto{
+
+	0%{
+		clip-path: polygon(69% 65%, 74% 95%, 12% 52%);
+		
+	}
+
+	50%{
+		clip-path: polygon(69% 65%, 64% 95%, 12% 52%);
+		
+	}
+
+	80%{
+		clip-path: polygon(69% 65%, 84% 95%, 12% 52%);
+
+	}
+
+	
+}
+
+.polyg29{
+       clip-path: polygon(100% 83%, 74% 61%, 3% 43%);
+    background-color: #21282f;
+    transform: rotate(28deg);
+    width: 150px;
+    height: 150px;
+    left: 276px;
+    top: 197px;
+    z-index: 3;
+    animation: nageleft 3s infinite;
+}
+
+@keyframes nageleft{
+
+	0%{
+		clip-path: polygon(100% 83%, 74% 61%, 3% 43%);
+	}
+
+	50%{
+		clip-path: polygon(90% 83%, 64% 61%, 3% 43%);
+		
+	}
+
+	80%{
+		clip-path: polygon(100% 73%, 74% 49%, 3% 43%);
+	}
+
+	
+}
+
+.polyg30{
+       clip-path: polygon(78% 70%, 52% 39%, 19% 48%);
+    background-color: #000;
+    transform: rotate(28deg);
+    width: 120px;
+    height: 150px;
+   left: 226px;
+    top: 207px;
+    z-index: 1;
+    animation: nageright 3s infinite;
+}
+
+@keyframes nageright{
+
+	0%{
+		clip-path: polygon(78% 70%, 52% 39%, 19% 48%);
+	}
+
+	50%{
+		clip-path: polygon(78% 80%, 52% 39%, 19% 48%);
+	}
+
+	
+
+	80%{
+		clip-path: polygon(90% 60%, 52% 39%, 19% 48%);
+	}
+}
+
+
+
+
+
+
+
+
+
+/*********** ANIMATION BRILLANCE ******************/
+
+
+.polyg .brillance:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0);
+  top: 0;
+  left: 0;
+  position: absolute; 
+}
+
+
+.polygopa .polyg:nth-child(1) .brillance:before{
+  animation: mirroir 0.8s 0.07s forwards; 
+}
+
+.polygopa .polyg:nth-child(2) .brillance:before{
+  animation: mirroir 0.8s 0.12s forwards; 
+}
+
+.polygopa .polyg:nth-child(3) .brillance:before{
+  animation: mirroir 0.8s 0.17s forwards;
+}
+
+.polygopa .polyg:nth-child(4) .brillance:before{
+  animation: mirroir 0.8s 0.22s forwards; 
+}
+
+.polygopa .polyg:nth-child(5) .brillance:before{
+  animation: mirroir 0.8s 0.27s forwards; 
+}
+
+.polygopa .polyg:nth-child(6) .brillance:before{
+  animation: mirroir 0.8s 0.32s forwards; 
+}
+
+.polygopa .polyg:nth-child(7) .brillance:before{
+  animation: mirroir 0.8s 0.37s forwards; 
+}
+
+.polygopa .polyg:nth-child(8) .brillance:before {
+  animation: mirroir 0.8s 0.42s forwards; 
+}
+
+.polygopa .polyg:nth-child(9) .brillance:before{
+  animation: mirroir 0.8s 0.47s forwards; 
+}
+
+.polygopa .polyg:nth-child(10) .brillance:before{
+  animation: mirroir 0.8s 0.52s forwards; 
+}
+
+.polygopa .polyg:nth-child(11) .brillance:before{
+  animation: mirroir 0.8s 0.57s forwards; 
+}
+
+.polygopa .polyg:nth-child(12) .brillance:before{
+  animation: mirroir 0.8s 0.62s forwards; 
+}
+
+.polygopa .polyg:nth-child(13) .brillance:before{
+  animation: mirroir 0.8s 0.67s forwards; 
+}
+
+.polygopa .polyg:nth-child(14) .brillance:before{
+  animation: mirroir 0.8s 0.72s forwards; 
+}
+
+.polygopa .polyg:nth-child(15) .brillance:before{
+  animation: mirroir 0.8s 0.77s forwards; 
+}
+
+.polygopa .polyg:nth-child(16) .brillance:before{
+  animation: mirroir 0.8s 0.82s forwards; 
+}
+
+.polygopa .polyg:nth-child(17) .brillance:before{
+  animation: mirroir 0.8s 0.87s forwards; 
+}
+
+.polygopa .polyg:nth-child(18) .brillance:before{
+  animation: mirroir 0.8s 0.92s forwards; 
+}
+
+.polygopa .polyg:nth-child(19) .brillance:before{
+  animation: mirroir 0.8s 0.97s forwards; 
+}
+
+.polygopa .polyg:nth-child(20) .brillance:before{
+  animation: mirroir 0.8s 1.02s forwards; 
+}
+
+.polygopa .polyg:nth-child(21) .brillance:before{
+  animation: mirroir 0.8s 1.07s forwards; 
+}
+
+.polygopa .polyg:nth-child(22) .brillance:before{
+  animation: mirroir 0.8s 1.12s forwards; 
+}
+
+.polygopa .polyg:nth-child(23) .brillance:before{
+  animation: mirroir 0.8s 1.17s forwards; 
+}
+
+.polygopa .polyg:nth-child(24) .brillance:before{
+  animation: mirroir 0.8s 1.22s forwards; 
+}
+
+.polygopa .polyg:nth-child(25) .brillance:before{
+  animation: mirroir 0.8s 1.27s forwards; 
+}
+
+.polygopa .polyg:nth-child(26) .brillance:before{
+  animation: mirroir 0.8s 1.32s forwards; 
+}
+
+.polygopa .polyg:nth-child(27) .brillance:before{
+  animation: mirroir 0.8s 1.37s forwards; 
+}
+
+.polygopa .polyg:nth-child(28) .brillance:before{
+  animation: mirroir 0.8s 1.42s forwards; 
+}
+
+.polygopa .polyg:nth-child(29) .brillance:before{
+  animation: mirroir 0.8s 1.47s forwards; 
+}
+
+.polygopa .polyg:nth-child(30) .brillance:before{
+  animation: mirroir 0.8s 1.52s forwards; 
+}
+
+
+@keyframes mirroir {
+  0% {
+    background-color: rgba(255, 255, 255, 0); }
+  35% {
+    background-color: rgba(255, 255, 255, 0.1); }
+  100% {
+    background-color: rgba(255, 255, 255, 0); } }
+
+
+.shadow {
+     top: 400px;
+    left: 15%;
+    background-image: radial-gradient(closest-side, rgba(0, 0, 0, 0.35) 0, rgba(0, 0, 0, 0.14) 35%, transparent 100%);
+    width: 600px;
+    height: 25px;
+    transform: rotate(7deg);
+}
