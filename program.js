@@ -134,6 +134,10 @@ var scroll_pos = 0;
 
 //MORPHING DAUPHIN
 function dauphin(){
+
+$(".polyg28").css('animation', 'nagelefto 3s infinite');
+$(".polyg29").css('animation', 'nageleft 3s infinite');
+$(".polyg30").css('animation', 'nageright 3s infinite');
 	$(".polyg0").css('left', '116px');
     	$(".polyg1").css('top', '150px');
 			$(".polyg2").css('left', '136px');
@@ -146,7 +150,9 @@ function dauphin(){
 
 //MORPHING ELEPHANT
 function elephant(){
-
+$(".polyg28").css('animation', 'none');
+$(".polyg29").css('animation', 'none');
+$(".polyg30").css('animation', 'none');
 	  $(".polyg0").css('left', '80px');
                     $(".polyg1").css('top', '80px');
                     $(".polyg2").css('left', '40px');
