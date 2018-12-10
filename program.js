@@ -114,16 +114,18 @@ var scroll_pos = 0;
             $(document).scroll(function() { 
                 scroll_pos = $(this).scrollTop();
 
-			if(scroll_pos >0  && scroll_pos < 100) {
-                    $(".bg").css('background', 'radial-gradient( #fff, #2193b0)');
+			if(scroll_pos < 100) {
+                    $(".bg").css('background', 'radial-gradient( #00c6ff, #0072ff)');
+                    dauphin();
                 }
 
-                else if(scroll_pos ==  100 && scroll_pos < 200) {
+                else if(scroll_pos < 250) {
                     $(".bg").css('background', 'radial-gradient( #fdc830, #f37335)');
                   elephant();
-                } else if (scroll_pos > 200) {
-                    $(".bg").css('background', 'radial-gradient( #56ab2f, #a8e063)');
+                } else if (scroll_pos < 400) {
+                    $(".bg").css('background', 'radial-gradient( #a8e063, #56ab2f)');
                 }
+                console.log(scroll_pos);
             });
 
 //************************************************************
@@ -132,8 +134,8 @@ var scroll_pos = 0;
 //MORPHING DAUPHIN
 function dauphin(){
 	$(".polyg0").css('left', '116px');
-    	$(".polyg1").css('top', '116px');
-			$(".polyg2").css('left', '103px');
+    	$(".polyg1").css('top', '150px');
+			$(".polyg2").css('left', '136px');
 
 }
 
