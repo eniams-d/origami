@@ -9,21 +9,21 @@ function effetbrillance(container) {
     
     setTimeout(function() {
 
-    	container.addClass('polygopa');
+    	container.addClass('dauphinopa');
      		
     }, 4000);
 
 
     setTimeout(function() {
     	 
-    container.removeClass('polygopa');
+    container.removeClass('dauphinopa');
     }, 6000);
 
 
   }, 7000);
 }
 
-$(".dauphin").each(function() {
+$(".scene").each(function() {
     effetbrillance($(this));
   });
 //************************************************************
@@ -135,19 +135,24 @@ var scroll_pos = 0;
 //MORPHING DAUPHIN
 function dauphin(){
 
-	$(".polyg28").css({'animation': 'nagelefto 3s infinite', "clip-path": "polygon(69% 65%, 74% 95%, 12% 52%)",
+	$(".dauphin28").css({'animation': 'nagelefto 3s infinite', "clip-path": "polygon(69% 65%, 74% 95%, 12% 52%)",
 		'width': '150px',
 		'height': '150px',
 		'left': '276px',
 		'top': '160px'});
 
-		$(".polyg29").css('animation', 'nageleft 3s infinite');
+		$(".dauphin29").css({'animation': 'nageleft 3s infinite', "clip-path": "polygon(100% 83%, 74% 61%, 3% 43%)",
+		'width': '150px',
+		'height': '150px',
+		'transform' : 'rotate(28deg)',
+		'left': '276px',
+		'top': '197px'});
 
-			$(".polyg30").css('animation', 'nageright 3s infinite');
+			$(".dauphin30").css('animation', 'nageright 3s infinite');
 
-				$(".polyg0").css('left', '116px');
-			    	$(".polyg1").css('top', '150px');
-						$(".polyg2").css('left', '136px');
+				$(".dauphin0").css('left', '116px');
+			    	$(".dauphin1").css('top', '150px');
+						$(".dauphin2").css('left', '136px');
 
 }
 
@@ -158,14 +163,14 @@ function dauphin(){
 //MORPHING ELEPHANT
 function elephant(){
 
-$(".polyg28").css({'animation': 'none',
+$(".dauphin28").css({'animation': 'none',
 		'clip-path': 'polygon(20% 59%, 9% 86%, 39% 95%)',
 		' width': '100px',
         'height': '100px',
         'left': '126px',
         'top': '290px'});
 
-$(".polyg29").css({'animation': 'none',
+$(".dauphin29").css({'animation': 'none',
 		'clip-path': 'polygon(16% 55%, 62% 74%, 39% 95%)',
 		'transform' : 'rotate(-1deg)',
 		'width': '100px',
@@ -173,10 +178,10 @@ $(".polyg29").css({'animation': 'none',
         'left': '138px',
         'top': '287px'});
 
-$(".polyg30").css('animation', 'none');
-	  $(".polyg0").css('left', '80px');
-                    $(".polyg1").css('top', '80px');
-                    $(".polyg2").css('left', '40px');
+$(".dauphin30").css('animation', 'none');
+	  $(".dauphin0").css('left', '80px');
+                    $(".dauphin1").css('top', '80px');
+                    $(".dauphin2").css('left', '40px');
 }
 //************************************************************
 
