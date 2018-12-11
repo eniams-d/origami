@@ -135,18 +135,13 @@ var scroll_pos = 0;
 //MORPHING DAUPHIN
 function dauphin(){
 
-	$(".dauphin28").css({'animation': 'nagelefto 3s infinite', "clip-path": "polygon(69% 65%, 74% 95%, 12% 52%)",
-		'width': '150px',
-		'height': '150px',
-		'left': '276px',
-		'top': '160px'});
+	$(".elephant28").addClass('dauphin28');
+	$(".elephant28").removeClass('elephant28');
 
-		$(".dauphin29").css({'animation': 'nageleft 3s infinite', "clip-path": "polygon(100% 83%, 74% 61%, 3% 43%)",
-		'width': '150px',
-		'height': '150px',
-		'transform' : 'rotate(28deg)',
-		'left': '276px',
-		'top': '197px'});
+	$(".elephant29").addClass('dauphin29');
+	$(".elephant29").removeClass('elephant29');
+
+		
 
 			$(".dauphin30").css('animation', 'nageright 3s infinite');
 
@@ -163,20 +158,14 @@ function dauphin(){
 //MORPHING ELEPHANT
 function elephant(){
 
-$(".dauphin28").css({'animation': 'none',
-		'clip-path': 'polygon(20% 59%, 9% 86%, 39% 95%)',
-		' width': '100px',
-        'height': '100px',
-        'left': '126px',
-        'top': '290px'});
+	$(".dauphin28").addClass('elephant28');
+	$(".dauphin28").removeClass('dauphin28');
 
-$(".dauphin29").css({'animation': 'none',
-		'clip-path': 'polygon(16% 55%, 62% 74%, 39% 95%)',
-		'transform' : 'rotate(-1deg)',
-		'width': '100px',
-        'height': '100px ',
-        'left': '138px',
-        'top': '287px'});
+	$(".dauphin29").addClass('elephant29');
+	$(".dauphin29").removeClass('dauphin29');
+
+
+
 
 $(".dauphin30").css('animation', 'none');
 	  $(".dauphin0").css('left', '80px');
