@@ -136,6 +136,18 @@ var scroll_pos = 0;
 function dauphin(){
 	$(".animation").addClass('moove');
 
+	for(i=0; i<37; i++){
+
+		$(".elephant" + i).addClass('dauphin' + i);
+		$(".dauphin" + i).removeClass('elephant' + i);
+	}
+
+	for(j=0; j<4; j++){
+
+		$(".elephant0" + j).addClass('dauphin0' + j);
+		$(".dauphin0" + j).removeClass('elephant0' + j);
+	}
+/*
 	$(".elephant28").addClass('dauphin28');
 	$(".elephant28").removeClass('elephant28');
 
@@ -249,7 +261,7 @@ function dauphin(){
 
 	$(".elephant36").addClass('dauphin36');
 	$(".elephant36").removeClass('elephant36');
-
+*/
 
 
 	
@@ -279,6 +291,30 @@ function elephant(){
 $(".animation").removeClass('moove');
 
 
+for(i=0; i<37; i++){
+
+		$(".dauphin" + i).addClass('elephant' + i);
+		$(".elephant" + i).removeClass('dauphin' + i);
+
+		var oeil = true;
+
+		if( oeil ){
+
+			$(".elephant10").addClass('dauphin10');
+			$(".dauphin10").removeClass('elephant10');
+
+			$(".elephant11").addClass('dauphin11');
+			$(".dauphin11").removeClass('elephant11');		
+		}
+	}
+
+	for(j=0; j<4; j++){
+
+		$(".dauphin0" + j).addClass('elephant0' + j);
+		$(".elephant0" + j).removeClass('dauphin0' + j);
+	}
+
+	/*
 	$(".dauphin28").addClass('elephant28');
 	$(".dauphin28").removeClass('dauphin28');
 
@@ -393,7 +429,7 @@ $(".animation").removeClass('moove');
 	$(".dauphin36").addClass('elephant36');
 	$(".dauphin36").removeClass('dauphin36');
 
-	
+	*/
 
 
 
