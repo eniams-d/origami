@@ -43,9 +43,9 @@
 			<div class="polyg dauphin10"><div class="brillance"></div></div>
 			<div class="polyg dauphin11"><div class="brillance"></div></div>
 
-			<div class="polyg pupille"><div class="brillance"></div></div>
-			<div class="polyg pupille-2"><div class="brillance"></div></div>
-			<div class="polyg pupi-bl"><div class="brillance"></div></div>
+			<div class="polyg oeil-dauphin pupille"><div class="brillance"></div></div>
+			<div class="polyg oeil-dauphin pupille-2"><div class="brillance"></div></div>
+			<div class="polyg oeil-dauphin pupi-bl"><div class="brillance"></div></div>
 
 			<div class="polyg dauphin12"><div class="brillance"></div></div>
 			<div class="polyg dauphin13"><div class="brillance"></div></div>
@@ -80,12 +80,59 @@
 
 			<div class="polyg dauphin31"><div class="brillance"></div></div>
 			<div class="polyg dauphin32"><div class="brillance"></div></div>
-
 			<div class="polyg dauphin33"><div class="brillance"></div></div>
 			<div class="polyg dauphin34"><div class="brillance"></div></div>
-
 			<div class="polyg dauphin35"><div class="brillance"></div></div>
 			<div class="polyg dauphin36"><div class="brillance"></div></div>
+			<div class="polyg dauphin37"><div class="brillance"></div></div>
+			<div class="polyg dauphin38"><div class="brillance"></div></div>
+			<div class="polyg dauphin39"><div class="brillance"></div></div>
+
+			<div class="polyg dauphin40"><div class="brillance"></div></div>
+			<div class="polyg dauphin41"><div class="brillance"></div></div>
+			<div class="polyg dauphin41-bis"><div class="brillance"></div></div>
+			<div class="polyg dauphin42"><div class="brillance"></div></div>
+			<div class="polyg dauphin43"><div class="brillance"></div></div>
+			<div class="polyg dauphin44"><div class="brillance"></div></div>
+			<div class="polyg dauphin45"><div class="brillance"></div></div>
+			<div class="polyg dauphin46"><div class="brillance"></div></div>
+			<div class="polyg dauphin47"><div class="brillance"></div></div>
+			<div class="polyg dauphin48"><div class="brillance"></div></div>
+			<div class="polyg dauphin49"><div class="brillance"></div></div>
+
+			<div class="polyg dauphin50"><div class="brillance"></div></div>
+			<div class="polyg dauphin51"><div class="brillance"></div></div>
+			<div class="polyg dauphin52"><div class="brillance"></div></div>
+			<div class="polyg dauphin53"><div class="brillance"></div></div>
+			<div class="polyg dauphin54"><div class="brillance"></div></div>
+			<div class="polyg dauphin55"><div class="brillance"></div></div>
+			<div class="polyg dauphin56"><div class="brillance"></div></div>
+			<div class="polyg dauphin57"><div class="brillance"></div></div>
+			<div class="polyg dauphin58"><div class="brillance"></div></div>
+			<div class="polyg dauphin59"><div class="brillance"></div></div>
+
+			<div class="polyg dauphin60"><div class="brillance"></div></div>
+			<div class="polyg dauphin61"><div class="brillance"></div></div>
+			<div class="polyg dauphin62"><div class="brillance"></div></div>
+			<div class="polyg dauphin63"><div class="brillance"></div></div>
+			<div class="polyg dauphin64"><div class="brillance"></div></div>
+			<div class="polyg dauphin65"><div class="brillance"></div></div>
+			<div class="polyg dauphin66"><div class="brillance"></div></div>
+			<div class="polyg dauphin67"><div class="brillance"></div></div>
+			<div class="polyg dauphin68"><div class="brillance"></div></div>
+			<div class="polyg dauphin69"><div class="brillance"></div></div>
+
+			<div class="polyg dauphin70"><div class="brillance"></div></div>
+			<div class="polyg dauphin71"><div class="brillance"></div></div>
+			<div class="polyg dauphin72"><div class="brillance"></div></div>
+			<div class="polyg dauphin73"><div class="brillance"></div></div>
+			<div class="polyg dauphin74"><div class="brillance"></div></div>
+			<div class="polyg dauphin75"><div class="brillance"></div></div>
+			<div class="polyg dauphin76"><div class="brillance"></div></div>
+			<div class="polyg dauphin77"><div class="brillance"></div></div>
+			<div class="polyg dauphin78"><div class="brillance"></div></div>
+			<div class="polyg dauphin79"><div class="brillance"></div></div>
+
 
 			
 
@@ -97,11 +144,104 @@
 		</div>
 	</div>
 
+	<div id="texto"></div>
+
+
+
+<script type="text/javascript">
+var titre = "Japprendslarabe.net ==> Apprendre L'Arabe Devient Facile ! ";
+var id = document.getElementById('texto');
+function mooveTitre() {
+titre = titre.substring(1, titre.length) + titre.substring(0, 1);
+
+setTimeout("mooveTitre()", 100);
+
+}
+mooveTitre();
+</script>
+
 	<div class="feu" style="width:100px; height:100px;"></div>
 </section>
 
+<!--
+
+let animTime = 650,
+    scrolling = false;
+    
+
+// change section on right buttons click
 
 
+
+function nextSection() {
+
+  scrolling = true;
+  setTimeout(function() {
+    scrolling = false;
+   }, animTime); //making unavailable to use scroll while changing section
+  let moveCord = $(".sactive").next();
+   if(moveCord.offset() == undefined) {
+    moveCord = $(".section-1");
+  }
+  $('html, body').stop().animate({
+        scrollTop: moveCord.offset().top
+    }, animTime);
+  $(".sactive").removeClass("sactive");
+  moveCord.addClass("sactive");
+  addAnim();
+  let arr = $(".sactive").prop("classList")[2];
+  $(".active").removeClass("active");
+  $(".msection." + arr).addClass("active");
+ 
+}
+
+function prevSection() {
+  let moveCord = $(".sactive").prev();
+  scrolling = true;
+  setTimeout(function() {
+      scrolling = false;
+    }, animTime); //making unavailable to use scroll while changing section
+ 
+  if(moveCord.offset() == undefined) {
+   moveCord = $(".section-4");
+  }
+  $('html, body').stop().animate({
+        scrollTop: moveCord.offset().top
+    }, animTime);
+  $(".sactive").removeClass("sactive");
+  moveCord.addClass("sactive");
+  addAnim();
+  let arr = $(".sactive").prop("classList")[2];
+  $(".active").removeClass("active");
+  $(".msection." + arr).addClass("active");
+}
+
+//change section on mouse scroll
+
+$(document).on("mousewheel DOMMouseScroll", (e) => {
+    if(scrolling) return;
+    if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+      prevSection();
+    } else { 
+      nextSection();
+    }
+});
+
+function addAnim() {
+  $(".anim").removeClass("anim");
+  $(".sactive .fruit").addClass("anim");
+}
+
+//move to a section on resize
+
+$(window).on("resize", () => {
+  let moveTo = $(".sactive").offset().top
+  $('html, body').stop().animate({
+        scrollTop: moveTo
+    }, animTime);
+});
+
+-->
 
 
 </body>

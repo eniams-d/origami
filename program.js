@@ -28,6 +28,7 @@ $(".scene").each(function() {
   });
 //************************************************************
 
+var classActive = $("div").hasClass("oeil-dauphin");
 
 // CLIGNEMENT DE L'OEIL HAUT
 function clignement(pupille){
@@ -36,13 +37,31 @@ function clignement(pupille){
 
 		setTimeout(function() {
 
-    		pupille.addClass('clignement');
+			switch (classActive){
+				case $("div").hasClass("oeil-dauphin"):
+			   		pupille.addClass('clignement');
+				break;
+
+				case $("div").hasClass("oeil-elephant"):
+			  		 pupille.addClass('clignement-el');
+				break;
+				default:
+    		}
      		
     	}, 1000);
 
 	    setTimeout(function() {
 	    	 
-	    	pupille.removeClass('clignement');
+	    	 switch (classActive){
+				case $("div").hasClass("oeil-dauphin"):
+			   pupille.removeClass('clignement');
+				break;
+
+				case $("div").hasClass("oeil-elephant"):
+			   pupille.removeClass('clignement-el');
+				break;
+				default:
+    		}
 
 	    }, 2000);
 
@@ -57,27 +76,53 @@ $(".pupille").each(function() {
 
 // CLIGNEMENT DE L'OEIL BAS
 function clignementdeux(pupilledeux){
-	
+ 
+ 
 	setInterval(function(){
 
 		setTimeout(function() {
 
-			pupilledeux.addClass('clignementdeux');
+			switch (classActive){
+				case $("div").hasClass("oeil-dauphin"):
+			   		pupilledeux.addClass('clignementdeux');
+				break;
+
+				case $("div").hasClass("oeil-elephant"):
+			  		 pupilledeux.addClass('clignementdeux-el');
+				break;
+				default:
+    		}
      		
     	}, 1000);
 
 	    setTimeout(function() {
-	    	 
-	    	pupilledeux.removeClass('clignementdeux');
+	    	switch (classActive){
+				case $("div").hasClass("oeil-dauphin"):
+			   pupilledeux.removeClass('clignementdeux');
+				break;
+
+				case $("div").hasClass("oeil-elephant"):
+			   pupilledeux.removeClass('clignementdeux-el');
+				break;
+				default:
+    		}
 
 	    }, 2000);
 
 	},6000);
+
 }
+
+
+
 
 $(".pupille-2").each(function() {
     clignementdeux($(this));
   });
+
+
+
+
 //***********************************************************
 
 
@@ -142,7 +187,7 @@ var scroll_pos = 0;
 function dauphin(){
 	$(".animation").addClass('moove');
 
-	for(i=0; i<37; i++){
+	for(i=0; i<80; i++){
 
 		$(".elephant" + i).addClass('dauphin' + i);
 		$(".dauphin" + i).removeClass('elephant' + i);
@@ -153,6 +198,30 @@ function dauphin(){
 		$(".elephant0" + j).addClass('dauphin0' + j);
 		$(".dauphin0" + j).removeClass('elephant0' + j);
 	}
+
+	/***OREILLE**/
+
+	$(".elephant41-bis").addClass("dauphin41-bis");
+	$(".elephant41-bis").removeClass("elephant41-bis");
+
+	/***OMBRE**/
+
+	$(".shadow-el").addClass("shadow");
+	$(".shadow-el").removeClass("shadow-el");
+
+	/***OEIL***/
+
+	$(".pupille-el").addClass("pupille");
+	$(".pupille-el").removeClass("pupille-el");
+
+	$(".pupille-2-el").addClass("pupille-2");
+	$(".pupille-2-el").removeClass("pupille-2-el");
+	
+	$(".pupi-bl-el").addClass("pupi-bl"); 
+	$(".pupi-bl-el").removeClass("pupi-bl-el"); 
+
+	$(".oeil-elephant").addClass("oeil-dauphin");
+	$(".oeil-elephant").removeClass("oeil-elephant");
 
 }
 
@@ -165,7 +234,7 @@ function elephant(){
 
 $(".animation").removeClass('moove');
 
-for(i=0; i<37; i++){
+for(i=0; i<80; i++){
 
 		$(".dauphin" + i).addClass('elephant' + i);
 		$(".elephant" + i).removeClass('dauphin' + i);
@@ -174,11 +243,11 @@ for(i=0; i<37; i++){
 
 		if( oeil ){
 
-			$(".elephant10").addClass('dauphin10');
-			$(".dauphin10").removeClass('elephant10');
+			$(".dauphin10").addClass('elephant10');
+			$(".dauphin10").removeClass('dauphin10');
 
-			$(".elephant11").addClass('dauphin11');
-			$(".dauphin11").removeClass('elephant11');		
+			$(".dauphin11").addClass('elephant11');
+			$(".dauphin11").removeClass('dauphin11');		
 		}
 	}
 
@@ -187,6 +256,31 @@ for(i=0; i<37; i++){
 		$(".dauphin0" + j).addClass('elephant0' + j);
 		$(".elephant0" + j).removeClass('dauphin0' + j);
 	}
+
+	/** OREILLE**/
+	$(".dauphin41-bis").addClass("elephant41-bis");
+	$(".dauphin41-bis").removeClass("dauphin41-bis");
+
+	/**OMBRE**/
+	$(".shadow").addClass("shadow-el");
+	$(".shadow").removeClass("shadow");
+
+	/**OEIL**/
+	$(".pupille").addClass("pupille-el");
+	$(".pupille").removeClass("pupille");
+
+	$(".pupille-2").addClass("pupille-2-el");
+	$(".pupille-2").removeClass("pupille-2");
+	
+	$(".pupi-bl").addClass("pupi-bl-el"); 
+	$(".pupi-bl").removeClass("pupi-bl"); 
+
+
+
+$(".oeil-dauphin").addClass("oeil-elephant");
+$(".oeil-dauphin").removeClass("oeil-dauphin");
+
+	
 
 }
 
